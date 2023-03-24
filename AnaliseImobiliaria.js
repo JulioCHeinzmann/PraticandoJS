@@ -32,29 +32,23 @@ Responda as seguintes perguntas e apresente os devidos cálculos para sua valida
 //ap65 = 12
 //ap90 = 16
 
-    function somaAluguel(alguel70, aluguel110, aluguel65, aluguel90){
 
-    var alguel70 = alguel70;
-    var aluguel110 = aluguel110;
-    var aluguel65 = aluguel65;
-    var aluguel90 = aluguel90;
 
-    
+
+function somaAluguel(alguel70, aluguel110, aluguel65, aluguel90){
     let totalAluguel = parseFloat(alguel70) + parseFloat(aluguel110) + parseFloat(aluguel65) + parseFloat (aluguel90);
-    return totalAluguel;
-
-    
+    return totalAluguel; 
 }
+
 let resultadoAluguel = somaAluguel(6500, 5740, 6600, 12000);
 console.log("O total adquirido com os apartamentos alugados é "+resultadoAluguel);
+
 let resultadoAluguelAtualizado = somaAluguel(6500 + 650, 5740 + 820, 6600 + 550, 12000 + 750);
 console.log("O total atualizado adquirido com os apartamentos alugados é "+resultadoAluguelAtualizado);
 
 
 
-function somaDespesas(reserva,alguel70, aluguel110, aluguel65, aluguel90){
-    const totalAluguel = somaAluguel(alguel70, aluguel110, aluguel65, aluguel90);
-
+function somaDespesas(reserva,totalAluguel){    
     var aluguelEspaco = 1650;
     var salarios = 25000;
     var equipamentos = 2500;
@@ -64,18 +58,20 @@ function somaDespesas(reserva,alguel70, aluguel110, aluguel65, aluguel90){
     return totalDespesas;
 
 }
+
 let resultadoDespesas = somaDespesas(.075, 6500, 5740, 6600, 12000 );
 console.log("O total gasto com as despesas da imobiliaria é "+resultadoDespesas);
 
 function balancoDeCapital(reserva, alguel70, aluguel110, aluguel65, aluguel90){
     let ganhos = somaAluguel(alguel70, aluguel110, aluguel65, aluguel90);
-    let despesas = somaDespesas(reserva, alguel70, aluguel110, aluguel65, aluguel90);
+    let despesas = somaDespesas(reserva, ganhos);
     if(ganhos < despesas){
         return `prejuizo de: ${ganhos - despesas}`
     } else {
         return `lucro de: ${ganhos - despesas}`
     }
 }
+
 let balancoDeLucro = balancoDeCapital(.075, 6500, 5740, 6600, 12000);
 console.log(balancoDeLucro);
 
