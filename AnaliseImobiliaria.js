@@ -19,7 +19,7 @@ No mês em que você iniciou os trabalhos, a imobiliária possuía 10 casas de 7
 
 Responda as seguintes perguntas e apresente os devidos cálculos para sua validação.
 
-- Seu supervisor, então, pergunta: a imobiliária apresentará lucro ou prejuízo no fechamento do mês atual? NAO
+- Seu supervisor, então, pergunta: a imobiliária apresentará lucro ou prejuízo no fechamento do mês atual? prejuízo
 
 - Em caso de prejuízo, caso a reserva de capital realizada no presente mês seja metade do previsto, é possível fechar o mês com lucro? [SIM, 2313/2-31463=30.306,5 lucro de 533,5]
 
