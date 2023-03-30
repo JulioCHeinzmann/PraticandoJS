@@ -68,7 +68,7 @@ let emergencyReserveAlert = (persentageReserveAlert*totalPayment)
 console.log("O total da reserva de emergencia em caso de prejuizo é de "+ emergencyReserveAlert + " reais");
 
 // como ouve um prejuizo de 533,5 no mes, uma medida de emergencia foi tomada
-balanceEarnigs.push({name: 'alerteEmergencyReserve', value: emergencyReserveAlert});
+balanceEarnigs.push({name: 'alerteEmergencyReserve', value: emergencyReserveAlert,});
 
 //logo devera ser feito um nova verificacao de ganhos da empresa
 function newEarningDifference(balanceEarnigs){
@@ -90,18 +90,7 @@ paymentRent[1].quantity += 1;
 paymentRent[2].quantity += 1;
 paymentRent[3].quantity += 1;
 
-function calculateNewTotalRent(paymentRent) {
-  let total = 0;
-
-  for(let i=0; i < paymentRent.length; i++) {
-      let payment = paymentRent[i];
-      let paymentTotal = payment.value * payment.quantity;
-      total += paymentTotal;
-  }
-  return total;
-}
-
-let newTotalPayment = calculateNewTotalRent(paymentRent);
+let newTotalPayment = calculateTotal(paymentRent);
 console.log("O total atualizado adquirido com os apartamentos alugados é " + newTotalPayment + " reais");
 
 // com o novo locro da empresa se fez necessario calcular o total de gastos para que se possa verificar os futuros ganhos da empresa
