@@ -90,10 +90,10 @@ paymentRent[1].quantity += 1;
 paymentRent[2].quantity += 1;
 paymentRent[3].quantity += 1;
 
+// com o novo locro da empresa se fez necessario calcular o total de gastos para que se possa verificar os futuros ganhos da empresa
+
 let newTotalPayment = calculateTotal(paymentRent);
 console.log("O total atualizado adquirido com os apartamentos alugados é " + newTotalPayment + " reais");
-
-// com o novo locro da empresa se fez necessario calcular o total de gastos para que se possa verificar os futuros ganhos da empresa
 
 const totalCosts = [
   {name:'allOfficeCosts', value:allCosts},
